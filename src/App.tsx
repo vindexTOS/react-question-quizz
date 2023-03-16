@@ -1,9 +1,14 @@
 import React, { useState } from 'react'
-
-import './App.css'
-
+import { Route, Routes } from 'react-router-dom'
+import MainPage from './components/MainPage'
+import Questions from './components/Questions'
 function App() {
-  return <div className="bg-red-600 text-red-500 ">hello</div>
+  return (
+    <Routes>
+      <Route path="/" element={<MainPage />} />
+      <Route path="/questions" element={<Questions />} />
+    </Routes>
+  )
 }
 
 export default App

@@ -122,6 +122,17 @@ const questions: Questions[] = [
     ],
     lvl: `easy`,
   },
+  {
+    question: `If you want to redirect a user to another page on a button click how would you go over implementing this?`,
+    correct: `using Link tag or useNavigate hook from react-router-dom`,
+    answers: [
+      `using Link tag or useNavigate hook from react-router-dom`,
+      'using html (a) teg and specific route link in href',
+      `using XML link tag`,
+      `React does not allows users to be redirected to different page because virtual DOM rerenders JSX on same page`,
+    ],
+    lvl: `medium`,
+  },
 ]
 
 export default questions
