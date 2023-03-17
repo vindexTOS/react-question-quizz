@@ -11,10 +11,7 @@ const questions: Questions[] = [
     correct:
       'React is an open-source front-end JavaScript library that is used for building composable user interfaces React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook s News Feed in 2011 and on Instagram in 2012.',
     answers: [
-      `React is an open-source front-end JavaScript library that is used for building composable user interfaces React was
-    created by Jordan Walke, a software engineer working for Facebook. 
-   React was first deployed on Facebook s News Feed in 2011 and on Instagram in 2012.
-   `,
+      `React is an open-source front-end JavaScript library that is used for building composable user interfaces React was created by Jordan Walke, a software engineer working for Facebook. React was first deployed on Facebook s News Feed in 2011 and on Instagram in 2012.`,
       `
 
    React is an open-source back-end JavaScript library that is used for building composable back end React was

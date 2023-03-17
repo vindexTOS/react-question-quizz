@@ -20,7 +20,10 @@ const Questions = () => {
         return { ...state, next: !state.next }
       case 'next':
         return {
-          index: state.index + action.payload!,
+          index:
+            state.index >= data.length
+              ? (state.index = 0)
+              : state.index + action.payload!,
           next: !state.next,
         }
       default:
@@ -87,13 +90,22 @@ const Questions = () => {
     btnDiv: `relative flex flex-col items-start justify-start  border-b-[1px]  border-[#3d9d9b]    w-[90%] `,
     line: `h-[100%] bg-blue-400 w-[6px] rounde-[50%] absolute  line `,
   }
+  const [shuffledAnsweres, setShuffledAnsweres] = React.useState<string[]>()
+  React.useEffect(() => {
+    let shuffle = data[state.index]?.answers?.sort(
+      (a, b) => Math.random() - 0.5,
+    )
+
+    setShuffledAnsweres(shuffle)
+    console.log(shuffledAnsweres)
+  }, [state.index, data])
 
   return (
     <div className={style.mainDiv}>
       <div className={style.questionDiv}>
         <h1 className={style.header}>{data[state.index]?.question}</h1>
         <div className={style.answeresDiv}>
-          {data[state.index]?.answers?.map((val: string, i: number) => {
+          {shuffledAnsweres?.map((val: string, i: number) => {
             return (
               <div className={`${style.btnDiv}  ${correct[i]}`}>
                 <div
