@@ -66,17 +66,15 @@ const Questions = () => {
       newcorrect[index] = 'bg-green-400 text-white'
 
       setCorrect(newcorrect)
-      setTimeout(() => {
-        setBtnDisable(true)
-      }, 1000)
+
+      setBtnDisable(!btnDisable)
       setNextPage(!nextPage)
       dispatch({ type: 'btnNext' })
     } else if (val !== data[state.index].correct) {
       newcorrect[index] = 'bg-red-600 text-white'
       setCorrect(newcorrect)
-      setTimeout(() => {
-        setBtnDisable(true)
-      }, 1000)
+
+      setBtnDisable(!btnDisable)
       setNextPage(!nextPage)
       dispatch({ type: 'btnNext' })
     }
@@ -98,6 +96,9 @@ const Questions = () => {
 
     setShuffledAnsweres(shuffle)
     console.log(shuffledAnsweres)
+    if (state.index >= 1) {
+      setBtnDisable(!btnDisable)
+    }
   }, [state.index, data])
 
   return (
@@ -107,14 +108,16 @@ const Questions = () => {
         <div className={style.answeresDiv}>
           {shuffledAnsweres?.map((val: string, i: number) => {
             return (
-              <div className={`${style.btnDiv}  ${correct[i]}`}>
+              <div key={i} className={`${style.btnDiv}  ${correct[i]}`}>
                 <div
                   className={`h-[100%] bg-blue-400 w-[6px] rounde-[50%] absolute   ${
                     indexBoolean[i] ? 'linetwo ' : 'line'
                   } `}
                 ></div>
                 <button
-                  // disabled={btnDisable}
+                  onMouseOver={() => onDivHover(i)}
+                  onMouseLeave={() => onMouseLeftIndex(i)}
+                  disabled={btnDisable}
                   onClick={() => clickHandle(val, i)}
                   className={style.btn}
                 >

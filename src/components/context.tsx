@@ -16,18 +16,11 @@ export const QusetionContextProvider = ({
   const navigate = useNavigate()
   const [data, setData] = useState<typeof questions>([])
   const randomQuestion = () => {
-    let randomQuestions = []
-    for (let i = 0; i < questions.length; i++) {
-      let random = Math.floor(Math.random() * questions.length)
-      randomQuestions.push(questions[random])
-    }
-    setData(randomQuestions)
+    let shuffledData = questions.sort(() => Math.random() - 0.5)
+    setData(shuffledData)
     navigate('/questions')
+    console.log(shuffledData)
   }
-
-  useEffect(() => {
-    randomQuestion()
-  }, [])
 
   return (
     <QuestionContext.Provider value={{ randomQuestion, data }}>

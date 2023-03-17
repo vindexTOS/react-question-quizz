@@ -130,6 +130,108 @@ const questions: Questions[] = [
     ],
     lvl: `medium`,
   },
+
+  {
+    question: `What is the difference between HTML and XHTML?`,
+    correct: `HTML is the standard markup language for creating web pages, while XHTML is a stricter and more standardized version of HTML. Both HTML and XHTML include a wide range of features,such as support for multimedia, styling, and scripting.`,
+    answers: [
+      `HTML is the standard markup language for creating web pages, while XHTML is a stricter and more standardized version of HTML. Both HTML and XHTML include a wide range of features,such as support for multimedia, styling, and scripting.`,
+      'HTML is mark up Language while XHTML is javascript front-end frame-work',
+      `XHTML markup library for CSS like bootstrap`,
+      ` XHTML does not uses classical body, div, h1 , etc tegs instad it only uses Textarea and Box tegs `,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is the difference between a class and an ID in CSS? `,
+    correct: `ID is specific to a single element,classes can be assigned to multiple elements on a page or throughout the website`,
+    answers: [
+      `ID is specific to a single element,classes can be assigned to multiple elements on a page or throughout the website`,
+      `ID can be used to target element with javascript while class  is unable to be dargeted `,
+      `ID is used to conect label element and input element`,
+      `ID is randomized character that we label objects, class is used for objected programing`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is responsive design?`,
+    correct: `allows your website content to flow freely across all screen resolutions and sizes, and renders it to look great on all devices.`,
+    answers: [
+      `allows your website content to flow freely across all screen resolutions and sizes, and renders it to look great on all devices.`,
+      `make htttps requests on all devices`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `How does the box model work in CSS?`,
+    correct: `The CSS Box Model is a term used for the container that wraps the following element properties within it.Margin,Border,Padding,Content,Height and Width`,
+    answers: [
+      `The CSS Box Model is a term used for the container that wraps the following element properties within it.Margin,Border,Padding,Content,Height and Width`,
+      `Display models such as display:flex; display:grid; , display:block; etc, it is used to make responsive web deisgn`,
+      `Box model works only in SCASS and it is not CSS proparty`,
+    ],
+    lvl: `medium`,
+  },
+  {
+    question: `What are pseudo-classes in CSS?`,
+    correct: `adding extra styling without modefying HTML or using js such as hover or click animations`,
+    answers: [
+      `adding extra styling without modefying HTML or using js such as hover or click animations`,
+      `Way for javascript to target individual elements by using document.targetelementByClass`,
+      `pseudo-classes are used for responsive web deisgn`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is the difference between margin and padding in CSS?`,
+    correct: `a margin is the space around an element's border,while padding is the space between an element's border and the element's content`,
+    answers: [
+      `a margin is the space around an element's border,while padding is the space between an element's border and the element's content`,
+      `a margin only works on the elements with absolute position while padding works on both`,
+      `a padding is the way to resize elements Y angle while a margin is used for X `,
+    ],
+    lvl: `medium`,
+  },
+  {
+    question: `How do you optimize a website's performance?`,
+    correct: `reduce https requests, compress img size make it webpg instad of jpg`,
+    answers: [
+      `reduce https requests, compress img size make it webpg instad of jpg`,
+      `by installing state managment library Redux`,
+      `by using yarn instad of npm for installing react`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What are the benefits of using a CSS preprocessor?`,
+    correct: `CSS preprocessors make it easy to automate repetitive tasks,reduce the number of errors and code bloat, create reusable code snippets, and ensure backward compatibility`,
+    answers: [
+      `CSS preprocessors make it easy to automate repetitive tasks,reduce the number of errors and code bloat, create reusable code snippets, and ensure backward compatibility`,
+      `to optimize website's performance`,
+      `to make easier responsive deisgn`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is the difference between inline, inline-block, and block elements?`,
+    correct: `inline element takes less place on the screen block element pushes out everything and takes whole width of the screen inline-block is same as inline but you can modifey its width and height `,
+    answers: [
+      `inline element takes less place on the screen block element pushes out everything and takes whole width of the screen inline-block is same as inline but you can modifey its width and height `,
+      `inline makes grid for the elements, block makes row from the elements while inline-block makes columes`,
+      `block element can only take one children element, inline element can only be initialized inside of the other parent element, inline-block is same as inline element but can only take one child`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is the difference between span and div elements?`,
+    correct: `div is block element so it takes up whole width of the screen span is inline elment so it take less place possible`,
+    answers: [
+      `div is block element so it takes up whole width of the screen span is inline elment so it take less place possible`,
+      `span cant be animated`,
+      `span can only be used inside of the text teg elments such as p or h1 tegs`,
+    ],
+    lvl: `easy`,
+  },
 ]
 
 export default questions
