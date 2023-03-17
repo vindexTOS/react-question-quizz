@@ -1,4 +1,4 @@
-import React, { useState, useContext, createContext } from 'react'
+import React, { useEffect, useState, useContext, createContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import questions from '../data/data'
 type Cell = {
@@ -24,6 +24,10 @@ export const QusetionContextProvider = ({
     setData(randomQuestions)
     navigate('/questions')
   }
+
+  useEffect(() => {
+    randomQuestion()
+  }, [])
 
   return (
     <QuestionContext.Provider value={{ randomQuestion, data }}>

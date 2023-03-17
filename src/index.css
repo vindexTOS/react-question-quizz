@@ -7,3 +7,60 @@
   -webkit-box-shadow: 5px 5px 13px -2px rgba(0, 0, 0, 0.96);
   -moz-box-shadow: 5px 5px 13px -2px rgba(0, 0, 0, 0.96);
 }
+
+.line {
+  background: linear-gradient(
+    168deg,
+    rgba(88, 227, 218, 1) 19%,
+    rgba(83, 180, 171, 1) 100%
+  );
+}
+.linetwo {
+  background: linear-gradient(
+    49deg,
+    rgba(37, 222, 224, 1) 0%,
+    rgba(58, 186, 191, 1) 100%
+  );
+}
+
+.answereBackGround {
+  background: linear-gradient(
+    211deg,
+    rgba(37, 222, 224, 1) 0%,
+    rgba(58, 186, 191, 1) 100%
+  );
+
+  transition: all 0.7s ease-in;
+
+  color: white;
+  animation: answereBackGround 5s ease;
+}
+
+.answereBackGroundOut {
+  background-color: 'white';
+  transition: all 0.7s ease-in;
+}
+
+@keyframes answereBackGround {
+  0% {
+    background: linear-gradient(
+      124deg,
+      rgba(37, 222, 224, 1) 0%,
+      rgba(58, 186, 191, 1) 100%
+    );
+  }
+  50% {
+    background: linear-gradient(
+      257deg,
+      rgba(37, 222, 224, 1) 0%,
+      rgba(58, 186, 191, 1) 100%
+    );
+  }
+  100% {
+    background: linear-gradient(
+      346deg,
+      rgba(37, 222, 224, 1) 0%,
+      rgba(58, 186, 191, 1) 100%
+    );
+  }
+}
