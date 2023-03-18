@@ -158,7 +158,7 @@ const questions: Questions[] = [
     correct: `allows your website content to flow freely across all screen resolutions and sizes, and renders it to look great on all devices.`,
     answers: [
       `allows your website content to flow freely across all screen resolutions and sizes, and renders it to look great on all devices.`,
-      `make htttps requests on all devices`,
+      `make http requests on all devices`,
     ],
     lvl: `easy`,
   },
@@ -242,3 +242,40 @@ export default questions
 //     answers:[],
 //     lvl:` `
 // }
+
+// What is the box model in CSS, and how does it work?
+// Answer: The box model is the way in which CSS defines the layout and sizing of elements on a web page. Each element is represented as a rectangular box, with content, padding, borders, and margins that determine its overall size and position.
+
+// Potential responses:
+
+// (correct) The box model in CSS refers to the way in which elements on a web page are laid out and sized. It includes the element's content, padding, borders, and margins.
+// The box model is the set of rules that determine how elements are stacked on a page, and how they interact with each other.
+// The box model is a fundamental concept in web development that defines how elements are structured on a page, and how they respond to changes in the viewport.
+// The box model in CSS can be a bit tricky to master, but it's an essential concept for building effective layouts and designs.
+// What are some common ways to optimize website performance?
+// Answer: Website performance optimization involves a range of strategies for improving the speed, responsiveness, and overall user experience of a site. Some common techniques include optimizing images and other assets, minimizing HTTP requests, using browser caching, and compressing files and data.
+
+// Potential responses:
+
+// (correct) There are many strategies for optimizing website performance, including minimizing HTTP requests, compressing files, and using browser caching.
+// To optimize website performance, you can use techniques like image optimization, minification, and code splitting to reduce load times and improve page speed.
+// One of the most effective ways to optimize website performance is to use a content delivery network (CDN) to distribute content across multiple servers.
+// Website performance optimization is an ongoing process that involves constantly monitoring and tweaking your site to ensure it's as fast and responsive as possible.
+// How do you handle cross-browser compatibility issues when developing for the web?
+// Answer: Cross-browser compatibility issues can arise when different web browsers interpret HTML, CSS, and JavaScript code in slightly different ways. To address these issues, developers can use techniques like feature detection, polyfills, and graceful degradation.
+
+// Potential responses:
+
+// (correct) Cross-browser compatibility issues can be a challenge, but you can address them by using feature detection and fallback techniques like polyfills and graceful degradation.
+// To ensure cross-browser compatibility, it's important to test your site in multiple browsers and devices, and to use modern web standards and best practices.
+// One way to handle cross-browser compatibility is to use a CSS preprocessor like Sass or Less, which can automatically generate vendor prefixes and other cross-browser code.
+// Cross-browser compatibility issues can be frustrating, but by using techniques like feature detection and progressive enhancement, you can ensure that your site works well across a range of browsers and devices.
+// What is the difference between a class and an ID in CSS?
+// Answer: In CSS, classes and IDs are used to apply styles to specific elements on a web page. The main difference between them is that IDs are unique identifiers that can only be used once on a page, while classes can be used multiple times.
+
+// Potential responses:
+
+// (correct) The main difference between classes and IDs in CSS is that IDs are unique identifiers that can only be used once on a page, while classes can be used multiple times.
+// In CSS, classes are used to apply styles to multiple elements that share the same characteristics, while IDs are used to target a single, unique element on a page.
+// One advantage of using classes over IDs is that you can apply styles to multiple elements at once, which can save time and streamline your CSS code.
+// Classes and IDs are both important tools for applying styles to elements on a
