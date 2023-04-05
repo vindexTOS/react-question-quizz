@@ -13,7 +13,7 @@ type State = {
 }
 
 const Questions = () => {
-  const { data } = UseQuestionContext()
+  const { data, practiceQuestions } = UseQuestionContext()
   const reducer = (state: State, action: Action) => {
     switch (action.type) {
       case 'btnNext':
@@ -103,6 +103,14 @@ const Questions = () => {
 
   return (
     <div className={style.mainDiv}>
+      {state.next && (
+        <button
+          onClick={() => practiceQuestions(data[state.index])}
+          className="absolute  bg-red-400 text-white px-10 py-2  mb-[40rem]  hover:linetwo  "
+        >
+          Add To Practise Questions
+        </button>
+      )}
       <div className={style.questionDiv}>
         <h1 className={style.header}>{data[state.index]?.question}</h1>
         <div className={style.answeresDiv}>

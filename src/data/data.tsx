@@ -1,4 +1,4 @@
-interface Questions {
+export interface Questions {
   question: string
   correct: string
   answers: string[]
