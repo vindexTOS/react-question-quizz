@@ -15,10 +15,10 @@ const MainPage = () => {
     mainDiv: `flex items-center justify-center w-[100vw]  max_sm:py-10  h-[100%] py-10 flex-col gap-10  overflox-x-hidden `,
     img: ` w-[60%]  max_sm:h-[300px]  h-[600px] max_md:w-[90%] boxshaddow rounded-[5px]`,
     btn: `w-[60%] max_md:w-[90%] h-[2.5rem] bg-[#3d9d9b] rounded-[5px] text-white font-bold hover:bg-[#348582] flex items-center justify-center text-center`,
-    inputDiv: `w-[60%] flex flex-col items-center gap-5 `,
+    inputDiv: `w-[60%]  max_Xll:w-[80%]  flex flex-col items-center gap-5 `,
     header: `text-[1.2rem] font-bold text-gray-400`,
     numberOfQuestions: `text-[1.2rem] text-green-600 font-bold w-[15rem] gap-2`,
-    pracitsDiv: `w-[50%]  gap-5 flex items-center justify-center flex-col outline-[1px] outline outline-gray-200 p-5   rounded-[35px] `,
+    pracitsDiv: `w-[50%] max_Xll:w-[100%]  gap-5 flex items-center justify-center flex-col outline-[1px] outline outline-gray-200 p-5 rounded-[35px] `,
     input: `w-[100%]`,
     linkBtnWrapper: `w-[100%] flex items-center justify-center gap-4`,
   }
@@ -44,7 +44,6 @@ const MainPage = () => {
               You Need To Practise
             </h1>
             <div className={style.linkBtnWrapper}>
-              {' '}
               <button className={style.btn} onClick={goToPractise}>
                 Practise Now
               </button>

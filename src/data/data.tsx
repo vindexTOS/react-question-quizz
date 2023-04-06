@@ -194,9 +194,9 @@ const questions: Questions[] = [
   },
   {
     question: `How do you optimize a website's performance?`,
-    correct: `reduce https requests, compress img size make it webpg instad of jpg`,
+    correct: `reduce https requests, compress img size make it webpg instad of jpg, use memo(),useMemo() and/or useCallback() hooks from React`,
     answers: [
-      `reduce https requests, compress img size make it webpg instad of jpg`,
+      `reduce https requests, compress img size make it webpg instad of jpg, use memo(),useMemo() and/or useCallback() hooks from React`,
       `by installing state managment library Redux`,
       `by using yarn instad of npm for installing react`,
     ],
@@ -229,6 +229,45 @@ const questions: Questions[] = [
       `div is block element so it takes up whole width of the screen span is inline elment so it take less place possible`,
       `span cant be animated`,
       `span can only be used inside of the text teg elments such as p or h1 tegs`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is the difference between Element and Component? `,
+    correct: `An element is a object describing what you want to appear on the screen in therms of the DOM nodes or other componets, element can containe other elements in their props , after its creation it cannot be  mutated, Whereas a component  can be declaraed in serveral different ways. it can be a class or function that will return JSX tree`,
+    answers: [
+      `An element is a object describing what you want to appear on the screen in therms of the DOM nodes or other componets, element can containe other elements in their props , after its creation it cannot be  mutated, Whereas a component  can be declaraed in serveral different ways. it can be a class or function that will return JSX tree`,
+      `An element is an HTML tag while component is CSS class`,
+      `An element can be created inside of the function or class , element can containe other elements in their props , after its creation it can be  mutated, Whereas a component  can be declaraed  only at top level once and it returns DOM node`,
+    ],
+    lvl: `hard`,
+  },
+  {
+    question: `How to create components in React?`,
+    correct: `There is two ways to create React components,either with defineing pure JS functional component that takes props and returns JSX or ES6 class component`,
+    answers: [
+      `There is two ways to create React components,either with defineing pure JS functional component that takes props and returns JSX or ES6 class component`,
+      `There is two ways to create React component, either with calling document.getElementById or document.getElementByClass  `,
+      `By creating a reducer function and returning JSX from it while passing props through action.payload`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `When to use a Class Component over a Function Component?`,
+    correct: `If you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries.`,
+    answers: [
+      `If you need a React functionality whose Function component equivalent is not present yet, like Error Boundaries.`,
+      `To do server side rendering`,
+      `If you are trying to avoide using useEFfect`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is state in React? `,
+    correct: `State is an object that holds some information that may change over the lifetime of the component, whenever the state object changes, the component re-renders.`,
+    answers: [
+      `State is an object that holds some information that may change over the lifetime of the component, whenever the state object changes, the component re-renders.`,
+      `State is an array that holds some JSX elements that may change over the lifetime of the component, whenever the state array changes, the DOM re-renders.`,
     ],
     lvl: `easy`,
   },
