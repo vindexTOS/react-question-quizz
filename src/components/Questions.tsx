@@ -13,7 +13,7 @@ type State = {
 }
 
 const Questions = () => {
-  const { data, practiceQuestions } = UseQuestionContext()
+  const { data, practiceQuestions, practiceData } = UseQuestionContext()
   const reducer = (state: State, action: Action) => {
     switch (action.type) {
       case 'btnNext':
@@ -100,16 +100,26 @@ const Questions = () => {
       setBtnDisable(!btnDisable)
     }
   }, [state.index, data])
-
+  const findPractise = practiceData.find(
+    (val: any) => val.question === data[state.index]?.question,
+  )
   return (
     <div className={style.mainDiv}>
-      {state.next && (
+      {!findPractise && state.next && (
         <button
-          onClick={() => practiceQuestions(data[state.index])}
-          className="absolute  bg-red-400 text-white px-10 py-2  mb-[40rem]  hover:linetwo  "
+          onClick={() => {
+            practiceQuestions(data[state.index]),
+              dispatch({ type: 'next', payload: +1 })
+          }}
+          className="absolute  bg-red-400 text-white px-10 py-2  rounded-[5px] mb-[40rem]  hover:bg-red-600 "
         >
           Add To Practise Questions
         </button>
+      )}{' '}
+      {findPractise && (
+        <div className="absolute  bg-blue-400 text-white px-10 py-2  mb-[40rem]  hover:bg-red-500 ">
+          This Question Is Already In Your Practis List
+        </div>
       )}
       <div className={style.questionDiv}>
         <h1 className={style.header}>{data[state.index]?.question}</h1>

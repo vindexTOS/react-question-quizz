@@ -10,6 +10,7 @@ type Cell = {
   practiceQuestions: (obj: Questions) => void
   practiceData: Questions[]
   goToPractise: () => void
+  RemovePractiseQuestions: (val: string) => void
 }
 
 const QuestionContext = createContext<Cell | null>(null)
@@ -54,7 +55,15 @@ export const QusetionContextProvider = ({
     setData(shuffledData)
     navigate('/questions')
   }
-
+  const RemovePractiseQuestions = (val: string) => {
+    let filter = practiceData.filter((value: any) => {
+      if (value.question !== val) {
+        return val
+      }
+    })
+    console.log(filter)
+    setPracticeData(filter)
+  }
   return (
     <QuestionContext.Provider
       value={{
@@ -65,6 +74,7 @@ export const QusetionContextProvider = ({
         practiceQuestions,
         practiceData,
         goToPractise,
+        RemovePractiseQuestions,
       }}
     >
       {children}
