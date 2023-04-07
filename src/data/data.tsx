@@ -271,6 +271,68 @@ const questions: Questions[] = [
     ],
     lvl: `easy`,
   },
+  {
+    question: `What is the DOM?`,
+    correct: `DOM stands for Document Object Model. it provides a tree-like structure representation of HTML, XML, and other document types.
+    the browser creates a DOM of the page, which allows JavaScript to access and manipulate the elements on the page.
+   The changes you make to the DOM are then reflected on the web page, allowing you to create dynamic and interactive web applications.`,
+    answers: [
+      `DOM stands for Document Object Model. it provides a tree-like structure representation of HTML, XML, and other document types.
+    the browser creates a DOM of the page, which allows JavaScript to access and manipulate the elements on the page.
+   The changes you make to the DOM are then reflected on the web page, allowing you to create dynamic and interactive web applications.`,
+      `DOM stands for Data Object Model, and it is used for storing and retrieving data from a database`,
+      `The DOM is a feature of server-side programming languages such as PHP and ASP.NET, and it is not used in client-side web development.`,
+    ],
+    lvl: `medium`,
+  },
+  {
+    question: `What is the virtual DOM and how does it work in React?`,
+    correct: `The Virtual DOM is a concept used in React to optimize the rendering of user interfaces. It is an in-memory representation of the actual DOM, which is a tree-like structure that represents the elements and attributes of an HTML or XML document.
+    The Virtual DOM in React optimizes UI rendering by updating only the parts of the actual DOM that need to be changed, making updates faster and more efficient.`,
+    answers: [
+      `The Virtual DOM is a concept used in React to optimize the rendering of user interfaces. It is an in-memory representation of the actual DOM, which is a tree-like structure that represents the elements and attributes of an HTML or XML document.
+    The Virtual DOM in React optimizes UI rendering by updating only the parts of the actual DOM that need to be changed, making updates faster and more efficient.`,
+      `The Virtual DOM is a physical component that you can add to a web page to enhance its functionality.`,
+      `The Virtual DOM is a type of styling language used in React to make websites look more modern and visually appealing.`,
+    ],
+    lvl: `medium`,
+  },
+  {
+    question: `What is the difference between the useCallback and useMemo hooks in React?`,
+    correct: `Both the useCallback and useMemo hooks are used to optimize the performance of React components,
+      The useCallback hook is used to memoize a function and prevent it from being re-created on each render.
+    The useMemo hook is used to memoize a value and prevent it from being re-computed on each render.  
+     while useCallback is used to memoize a function and useMemo is used to memoize a value.`,
+    answers: [
+      `Both the useCallback and useMemo hooks are used to optimize the performance of React components,
+    The useCallback hook is used to memoize a function and prevent it from being re-created on each render.
+  The useMemo hook is used to memoize a value and prevent it from being re-computed on each render.  
+   while useCallback is used to memoize a function and useMemo is used to memoize a value.`,
+      `The useCallback hook is used to memoize a value and prevent it from being re-computed on each render, while useMemo is used to memoize a function.`,
+      `The useCallback hook is used to prevent unnecessary re-renders of a component, while useMemo is used to control the component's state updates.`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is event bubbling in JavaScript?`,
+    correct: `Event bubbling is a process in which an event that is triggered on an inner element (such as a button or link) is propagated up through its parent elements in the DOM tree until it reaches the top-level element, such as the document or window. This allows event handlers attached to parent elements to also handle the event, in addition to any handlers attached to the original inner element.`,
+    answers: [
+      `Event bubbling is a process in which an event that is triggered on an inner element (such as a button or link) is propagated up through its parent elements in the DOM tree until it reaches the top-level element, such as the document or window. This allows event handlers attached to parent elements to also handle the event, in addition to any handlers attached to the original inner element.`,
+      `Event bubbling is a process in which events can be triggered multiple times on the same element, causing them to "bubble up" and trigger the same event handlers repeatedly.`,
+      `Event bubbling is a process in which events are prevented from propagating up through the parent elements of the DOM tree, allowing them to be handled only by the element on which they were triggered.`,
+    ],
+    lvl: `hard`,
+  },
+  {
+    question: `What is a closure in JavaScript?`,
+    correct: `Functions in JavaScript can be defined inside other functions, and when a function is defined inside another function, it has access to the outer function's variables and parameters. This is known as closure in JavaScript.`,
+    answers: [
+      `Functions in JavaScript can be defined inside other functions, and when a function is defined inside another function, it has access to the outer function's variables and parameters. This is known as closure in JavaScript.`,
+      `A closure is a variable that is declared inside a function and can be accessed from outside the function.`,
+      `A closure is a function that can be called from another function, but does not have access to the variables or parameters of the outer function.`,
+    ],
+    lvl: `medium`,
+  },
 ]
 
 export default questions
@@ -318,3 +380,45 @@ export default questions
 // In CSS, classes are used to apply styles to multiple elements that share the same characteristics, while IDs are used to target a single, unique element on a page.
 // One advantage of using classes over IDs is that you can apply styles to multiple elements at once, which can save time and streamline your CSS code.
 // Classes and IDs are both important tools for applying styles to elements on a
+
+// That's correct, but there's more to it than that! The main difference between props and state in React is that props are used to pass data from a parent component to a child component, whereas state is used to manage data within a single component.
+
+// Props are read-only and should not be modified by the child component. On the other hand, state is mutable and can be changed using the setState method.
+
+// Another key difference is that props are passed down from parent to child components, whereas state is always contained within a single component.
+
+// Great job so far! Here's your next question:
+
+// Good answer! A React component is a reusable piece of UI that can be composed with other components to build complex user interfaces. There are two main types of React components: class components and functional components. Class components are created using the ES6 class syntax and have additional features such as lifecycle methods, while functional components are just plain JavaScript functions that return JSX. Both types of components can accept props as inputs and return JSX to define the user interface.
+
+// Components are the building blocks of a React application and can be reused across multiple parts of an application. Keep up the good work! Here's your next question:
+
+// That's a good start! React hooks are actually a way to add state and other features to functional components, which previously could not have state or lifecycle methods. React hooks were introduced in React 16.8 as a way to simplify and streamline the development of React components.
+
+// Hooks provide a way to reuse stateful logic between components and to manage component lifecycle events in functional components. Some commonly used hooks include useState, useEffect, useContext, and useCallback.
+
+// The useEffect hook in React is used to manage side effects in functional components. Side effects are any actions that affect something outside of the component, such as fetching data from an API, updating the document title, or setting up event listeners.
+
+// The useEffect hook takes two arguments: a function and a dependency array. The function is the side effect that you want to perform, and the dependency array is an optional array of values that the effect depends on. The effect will be re-run whenever any value in the dependency array changes.
+
+// The useEffect hook is typically used to replace the lifecycle methods in class components, such as componentDidMount, componentDidUpdate, and componentWillUnmount. Great job so far! Here's your next question:
+
+// Redux is a popular state management library for JavaScript applications, including React. It provides a predictable way to manage application state by using a single global store and a set of reducer functions that handle state updates.
+
+// In Redux, the state of the entire application is stored in a single object called the store. The store is updated using actions, which are plain JavaScript objects that describe what happened in the application. Reducer functions take the current state of the store and an action and return a new state object based on the action.
+
+// React works with Redux by using a special component called a "container" or "smart" component that is connected to the Redux store. The container component maps the state and actions from the store to the props of the component, allowing it to use the data and trigger actions to update the store.
+
+// In React, a controlled component is a component where the value of an input field is controlled by React state. This means that the component's state is the "single source of truth" for the value of the input field. To make a component controlled, you need to bind the value of the input field to a state variable and provide an onChange handler to update the state when the user types in the input field.
+
+// In contrast, an uncontrolled component is a component where the value of an input field is not controlled by React state. Instead, the value is managed by the browser's DOM. To get the value of an uncontrolled input field, you would typically use a ref to access the DOM node.
+
+// Controlled components give you more control over the behavior of your components, but require more code to set up. Uncontrolled components are simpler to set up, but give you less control over the behavior of your components.
+
+// Great job so far! Here's your next question:
+
+// In JavaScript, when an event is triggered on an element, such as a mouse click or a key press, that event can "bubble up" through the DOM tree, triggering the same event on each ancestor element of the original element. This process is called "event bubbling".
+
+// For example, if you have a button inside a div, and you click on the button, the click event will first be triggered on the button itself, and then bubble up to the div, the body, the HTML element, and finally the window object. This can be useful if you want to handle the same event on multiple elements in a hierarchy, but it can also cause unintended side effects if you don't handle the event correctly.
+
+// To prevent event bubbling, you can use the event.stopPropagation() method, which stops the event from propagating up the DOM tree.
