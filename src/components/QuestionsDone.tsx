@@ -15,7 +15,7 @@ const QuestionsDone: FC<QuestoinDoneProp> = ({ countWrong, countCorrect }) => {
   return (
     <div className={style.mainDiv}>
       <div className={style.headerDiv}>
-        <h1 className={`${style.header} bg-green-500`}>
+        <h1  className={`${style.header} bg-green-500`}>
           You Got {countCorrect} Answeres Right
         </h1>
         <h1 className={`${style.header} bg-red-500`}>

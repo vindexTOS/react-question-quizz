@@ -299,15 +299,10 @@ const questions: Questions[] = [
   },
   {
     question: `What is the difference between the useCallback and useMemo hooks in React?`,
-    correct: `Both the useCallback and useMemo hooks are used to optimize the performance of React components,
-      The useCallback hook is used to memoize a function and prevent it from being re-created on each render.
-    The useMemo hook is used to memoize a value and prevent it from being re-computed on each render.  
-     while useCallback is used to memoize a function and useMemo is used to memoize a value.`,
+    correct: `Both the useCallback and useMemo hooks are used to optimize the performance of React components,The useCallback hook is used to memoize a function and prevent it from being re-created on each render.The useMemo hook is used to memoize a value and prevent it from being re-computed on each render.  while useCallback is used to memoize a function and useMemo is used to memoize a value.`,
+
     answers: [
-      `Both the useCallback and useMemo hooks are used to optimize the performance of React components,
-    The useCallback hook is used to memoize a function and prevent it from being re-created on each render.
-  The useMemo hook is used to memoize a value and prevent it from being re-computed on each render.  
-   while useCallback is used to memoize a function and useMemo is used to memoize a value.`,
+      `Both the useCallback and useMemo hooks are used to optimize the performance of React components,The useCallback hook is used to memoize a function and prevent it from being re-created on each render.The useMemo hook is used to memoize a value and prevent it from being re-computed on each render.  while useCallback is used to memoize a function and useMemo is used to memoize a value.`,
       `The useCallback hook is used to memoize a value and prevent it from being re-computed on each render, while useMemo is used to memoize a function.`,
       `The useCallback hook is used to prevent unnecessary re-renders of a component, while useMemo is used to control the component's state updates.`,
     ],
@@ -315,9 +310,9 @@ const questions: Questions[] = [
   },
   {
     question: `What is event bubbling in JavaScript?`,
-    correct: `Event bubbling is a process in which an event that is triggered on an inner element (such as a button or link) is propagated up through its parent elements in the DOM tree until it reaches the top-level element, such as the document or window. This allows event handlers attached to parent elements to also handle the event, in addition to any handlers attached to the original inner element.`,
+    correct: `Event bubbling is a term in the DOM where the event an element receives is bubbled (transmitted) to its parent and ancestors, upward in the DOM tree,until it gets to the root`,
     answers: [
-      `Event bubbling is a process in which an event that is triggered on an inner element (such as a button or link) is propagated up through its parent elements in the DOM tree until it reaches the top-level element, such as the document or window. This allows event handlers attached to parent elements to also handle the event, in addition to any handlers attached to the original inner element.`,
+      `Event bubbling is a term in the DOM where the event an element receives is bubbled (transmitted) to its parent and ancestors, upward in the DOM tree,until it gets to the root`,
       `Event bubbling is a process in which events can be triggered multiple times on the same element, causing them to "bubble up" and trigger the same event handlers repeatedly.`,
       `Event bubbling is a process in which events are prevented from propagating up through the parent elements of the DOM tree, allowing them to be handled only by the element on which they were triggered.`,
     ],
@@ -330,6 +325,54 @@ const questions: Questions[] = [
       `Functions in JavaScript can be defined inside other functions, and when a function is defined inside another function, it has access to the outer function's variables and parameters. This is known as closure in JavaScript.`,
       `A closure is a variable that is declared inside a function and can be accessed from outside the function.`,
       `A closure is a function that can be called from another function, but does not have access to the variables or parameters of the outer function.`,
+    ],
+    lvl: `medium`,
+  },
+  {
+    question: `What is the difference between let and var in JavaScript?`,
+    correct: `var can be declared globally or locally within a function,but it has function scope,with means it can be accessed outside of the block it was declared in, while let has  block scope,with means that it can only be accessed within the block it was declared in, in short var has function scope,let has block scope `,
+    answers: [
+      `var can be declared globally or locally within a function,but it has function scope,with means it can be accessed outside of the block it was declared in, while let has  block scope,with means that it can only be accessed within the block it was declared in, in short var has function scope,let has block scope `,
+      `var is global variable that cannot be re declared after its decleration, while let can be re declared `,
+    ],
+    lvl: `medium`,
+  },
+  {
+    question: `What is the difference between == and === operators in JavaScript?`,
+    correct: `double equals only checks values while triple  equals  types  checks type of the value and value itself`,
+    answers: [
+      `double equals only checks values while triple  equals  types  checks type of the value and value itself`,
+      `double re-declares variable while triple equals checks the value`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is an arrow function in JavaScript?`,
+    correct: `arrow function is a shorthand syntax of the JS function it was introduced in ES6`,
+    answers: [
+      `arrow function is a shorthand syntax of the JS function it was introduced in ES6`,
+      `arrow function is a way of declaring timeout function`,
+      `arrow function is way of fetching a data from API it was introduced in ES6`,
+    ],
+    lvl: `easy`,
+  },
+  {
+    question: `What is the difference between null and undefined in JavaScript?`,
+    correct: `both null and undefiend are false values, JavaScript never assignes null to a variable by itself its always defined  by developler null is a assigned value as representation of no value, undefiend is when you don't assigne any value to a variable`,
+    answers: [
+      `both null and undefiend are false values, JavaScript never assignes null to a variable by itself its always defined  by developler null is a assigned value as representation of no value, undefiend is when you don't assigne any value to a variable`,
+      `null is assigned to variable when value is false , undefined is assigned to a variable when value is empty`,
+      `null and undefined are both false values, null is assigned by javascript to only to number type, while undefined is assgined to all of the JS types`,
+    ],
+    lvl: `medium`,
+  },
+  {
+    question: `What is the difference between map and forEach array methods in JavaScript?`,
+    correct: `map returns a array, it mutates a array while forEach method just loops over an array and does not returnes anything, map can be used with another array methods such as filter method while forEach cannot be used with anothe array method`,
+    answers: [
+      `map returns a array, it mutates a array while forEach method just loops over an array and does not returnes anything, map can be used with another array methods such as filter method while forEach cannot be used with anothe array method`,
+      `map method maps through the array and retunrs a filtered value, while forEach method is basicily like a for loop`,
+      `there is no differenc between forEach and map methods both of them return mutated array`,
     ],
     lvl: `medium`,
   },
