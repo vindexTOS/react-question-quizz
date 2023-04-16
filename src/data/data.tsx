@@ -376,6 +376,51 @@ const questions: Questions[] = [
     ],
     lvl: `medium`,
   },
+
+  {
+    question: `What is a closure in JavaScript and how is it useful?`,
+    correct: `That's partially correct. Closures in JavaScript are actually a way to access variables that are outside of a function's scope. When a function is created, it has access to all the variables in the outer (parent) function, even after the parent function has returned.`,
+    answers: [],
+    lvl: ` `,
+  },
+  {
+    question: `What is the difference between synchronous and asynchronous code in JavaScript?`,
+    correct: ` `,
+    answers: [],
+    lvl: ` `,
+  },
+  {
+    question: `What is the difference between synchronous and asynchronous code in JavaScript?`,
+    correct: `React.memo() is a higher-order component that memoizes a given component and re-renders it only if its props change. In other words, it compares the current props with the previous props and only if there are any differences, it re-renders the component.
+
+    This optimization can significantly improve the performance of your application, especially if you have complex or frequently updated components. React.memo() is particularly useful for preventing unnecessary re-renders of child components in a component hierarchy. `,
+    answers: [],
+    lvl: ` `,
+  },
+  {
+    question: `What is the purpose of React.memo() and how does it work?`,
+    correct: `A Higher-Order Component (HOC) is a function that takes a component as an argument and returns a new component with additional functionality. It is a pattern in React used for code reuse, logic abstraction, and state management.
+
+    An HOC can be used for a variety of purposes, such as:
+    
+    Adding new props or functionality to a component
+    Managing state and passing down data to components
+    Wrapping components with additional behavior (e.g. authentication, logging)
+    Conditionally rendering components based on certain criteria
+    By returning a new component with additional functionality, HOCs allow for the creation of reusable code and abstraction of complex logic. `,
+    answers: [],
+    lvl: ` `,
+  },
+  {
+    question: `What is the difference between props and state in React?`,
+    correct: `Props are immutable data passed from a parent component to a child component. They are read-only and cannot be modified within the child component.
+
+    On the other hand, state is a mutable data store that belongs to a component. It is managed within the component and can be modified using the setState method. State can also be passed down to child components as props.
+    
+    So, while props are used for communication between components, state is used for managing the internal data and logic of a component. `,
+    answers: [],
+    lvl: ` `,
+  },
 ]
 
 export default questions
