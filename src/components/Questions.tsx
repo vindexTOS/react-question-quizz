@@ -50,6 +50,7 @@ const Questions = () => {
     let newIndexBoolean = [...indexBoolean]
     newIndexBoolean[index] = true
     setIndexBoolean(newIndexBoolean)
+    console.log(newIndexBoolean)
   }
 
   const onMouseLeftIndex = (index: number) => {

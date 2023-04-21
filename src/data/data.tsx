@@ -3,6 +3,7 @@ export interface Questions {
   correct: string
   answers: string[]
   lvl: string
+  category?: string
 }
 
 const questions: Questions[] = [
@@ -21,6 +22,7 @@ const questions: Questions[] = [
       ` React is an Javascript Run Time module `,
     ],
     lvl: 'easy',
+    category: `react`,
   },
   {
     question: `What are the major features of React?`,
@@ -45,6 +47,7 @@ const questions: Questions[] = [
     4. Uses Objective orianted programing`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
   {
     question: `What is JSX?`,
@@ -65,6 +68,7 @@ const questions: Questions[] = [
    bypass access controls and impersonate users`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
 
   {
@@ -77,6 +81,7 @@ const questions: Questions[] = [
       `useState and useCallback`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
   {
     question: `let's imagine i have two components where A is the parent of B. How can i let B know about state that lives in A?`,
@@ -87,6 +92,7 @@ const questions: Questions[] = [
       `React does not uses multiple components such as parent and children`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
   {
     question: `why would someone use the useEffect hook?`,
@@ -97,6 +103,7 @@ const questions: Questions[] = [
       `make a loop to re update DOM everytime page reloads`,
     ],
     lvl: `medium`,
+    category: `react`,
   },
   {
     question: `if you need to set up a fully client-side rendered SPA with React,what toolchain would you use ?`,
@@ -108,6 +115,7 @@ const questions: Questions[] = [
       `install Nodejs`,
     ],
     lvl: `hard`,
+    category: `react`,
   },
   {
     question: `why would someone use React?`,
@@ -118,6 +126,7 @@ const questions: Questions[] = [
       `It uses RealDOM instead of VirtualDOM   with makes native user-like experiences`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
   {
     question: `If you want to redirect a user to another page on a button click how would you go over implementing this?`,
@@ -129,6 +138,7 @@ const questions: Questions[] = [
       `React does not allows users to be redirected to different page because virtual DOM rerenders JSX on same page`,
     ],
     lvl: `medium`,
+    category: `react`,
   },
 
   {
@@ -141,6 +151,7 @@ const questions: Questions[] = [
       ` XHTML does not uses classical body, div, h1 , etc tegs instad it only uses Textarea and Box tegs `,
     ],
     lvl: `easy`,
+    category: `html`,
   },
   {
     question: `What is the difference between a class and an ID in CSS? `,
@@ -152,6 +163,7 @@ const questions: Questions[] = [
       `ID is randomized character that we label objects, class is used for objected programing`,
     ],
     lvl: `easy`,
+    category: `html`,
   },
   {
     question: `What is responsive design?`,
@@ -161,6 +173,7 @@ const questions: Questions[] = [
       `make http requests on all devices`,
     ],
     lvl: `easy`,
+    category: `html`,
   },
   {
     question: `How does the box model work in CSS?`,
@@ -171,6 +184,7 @@ const questions: Questions[] = [
       `Box model works only in SCASS and it is not CSS proparty`,
     ],
     lvl: `medium`,
+    category: `html`,
   },
   {
     question: `What are pseudo-classes in CSS?`,
@@ -181,6 +195,7 @@ const questions: Questions[] = [
       `pseudo-classes are used for responsive web deisgn`,
     ],
     lvl: `easy`,
+    category: `html`,
   },
   {
     question: `What is the difference between margin and padding in CSS?`,
@@ -191,6 +206,7 @@ const questions: Questions[] = [
       `a padding is the way to resize elements Y angle while a margin is used for X `,
     ],
     lvl: `medium`,
+    category: `html`,
   },
   {
     question: `How do you optimize a website's performance?`,
@@ -201,6 +217,7 @@ const questions: Questions[] = [
       `by using yarn instad of npm for installing react`,
     ],
     lvl: `easy`,
+    category: `js`,
   },
   {
     question: `What are the benefits of using a CSS preprocessor?`,
@@ -211,6 +228,7 @@ const questions: Questions[] = [
       `to make easier responsive deisgn`,
     ],
     lvl: `easy`,
+    category: `html`,
   },
   {
     question: `What is the difference between inline, inline-block, and block elements?`,
@@ -221,6 +239,7 @@ const questions: Questions[] = [
       `block element can only take one children element, inline element can only be initialized inside of the other parent element, inline-block is same as inline element but can only take one child`,
     ],
     lvl: `easy`,
+    category: `html`,
   },
   {
     question: `What is the difference between span and div elements?`,
@@ -231,6 +250,7 @@ const questions: Questions[] = [
       `span can only be used inside of the text teg elments such as p or h1 tegs`,
     ],
     lvl: `easy`,
+    category: `html`,
   },
   {
     question: `What is the difference between Element and Component? `,
@@ -241,6 +261,7 @@ const questions: Questions[] = [
       `An element can be created inside of the function or class , element can containe other elements in their props , after its creation it can be  mutated, Whereas a component  can be declaraed  only at top level once and it returns DOM node`,
     ],
     lvl: `hard`,
+    category: `react`,
   },
   {
     question: `How to create components in React?`,
@@ -251,6 +272,7 @@ const questions: Questions[] = [
       `By creating a reducer function and returning JSX from it while passing props through action.payload`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
   {
     question: `When to use a Class Component over a Function Component?`,
@@ -261,6 +283,7 @@ const questions: Questions[] = [
       `If you are trying to avoide using useEFfect`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
   {
     question: `What is state in React? `,
@@ -270,6 +293,7 @@ const questions: Questions[] = [
       `State is an array that holds some JSX elements that may change over the lifetime of the component, whenever the state array changes, the DOM re-renders.`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
   {
     question: `What is the DOM?`,
@@ -284,6 +308,7 @@ const questions: Questions[] = [
       `The DOM is a feature of server-side programming languages such as PHP and ASP.NET, and it is not used in client-side web development.`,
     ],
     lvl: `medium`,
+    category: `js`,
   },
   {
     question: `What is the virtual DOM and how does it work in React?`,
@@ -296,6 +321,7 @@ const questions: Questions[] = [
       `The Virtual DOM is a type of styling language used in React to make websites look more modern and visually appealing.`,
     ],
     lvl: `medium`,
+    category: `react`,
   },
   {
     question: `What is the difference between the useCallback and useMemo hooks in React?`,
@@ -307,6 +333,7 @@ const questions: Questions[] = [
       `The useCallback hook is used to prevent unnecessary re-renders of a component, while useMemo is used to control the component's state updates.`,
     ],
     lvl: `easy`,
+    category: `react`,
   },
   {
     question: `What is event bubbling in JavaScript?`,
@@ -317,6 +344,7 @@ const questions: Questions[] = [
       `Event bubbling is a process in which events are prevented from propagating up through the parent elements of the DOM tree, allowing them to be handled only by the element on which they were triggered.`,
     ],
     lvl: `hard`,
+    category: `js`,
   },
   {
     question: `What is a closure in JavaScript?`,
@@ -327,6 +355,7 @@ const questions: Questions[] = [
       `A closure is a function that can be called from another function, but does not have access to the variables or parameters of the outer function.`,
     ],
     lvl: `medium`,
+    category: `js`,
   },
   {
     question: `What is the difference between let and var in JavaScript?`,
@@ -336,6 +365,7 @@ const questions: Questions[] = [
       `var is global variable that cannot be re declared after its decleration, while let can be re declared `,
     ],
     lvl: `medium`,
+    category: `js`,
   },
   {
     question: `What is the difference between == and === operators in JavaScript?`,
@@ -345,6 +375,7 @@ const questions: Questions[] = [
       `double re-declares variable while triple equals checks the value`,
     ],
     lvl: `easy`,
+    category: `js`,
   },
   {
     question: `What is an arrow function in JavaScript?`,
@@ -355,6 +386,7 @@ const questions: Questions[] = [
       `arrow function is way of fetching a data from API it was introduced in ES6`,
     ],
     lvl: `easy`,
+    category: `js`,
   },
   {
     question: `What is the difference between null and undefined in JavaScript?`,
@@ -365,6 +397,7 @@ const questions: Questions[] = [
       `null and undefined are both false values, null is assigned by javascript to only to number type, while undefined is assgined to all of the JS types`,
     ],
     lvl: `medium`,
+    category: `js`,
   },
   {
     question: `What is the difference between map and forEach array methods in JavaScript?`,
@@ -375,19 +408,30 @@ const questions: Questions[] = [
       `there is no differenc between forEach and map methods both of them return mutated array`,
     ],
     lvl: `medium`,
+    category: `js`,
   },
 
   {
     question: `What is a closure in JavaScript and how is it useful?`,
-    correct: `That's partially correct. Closures in JavaScript are actually a way to access variables that are outside of a function's scope. When a function is created, it has access to all the variables in the outer (parent) function, even after the parent function has returned.`,
-    answers: [],
-    lvl: ` `,
+    correct: `Closures in JavaScript are a way to access variables that are outside of a function's scope. When a function is created, it has access to all the variables in the outer (parent) function, even after the parent function has returned.`,
+    answers: [
+      `Closures in JavaScript are a way to access variables that are outside of a function's scope. When a function is created, it has access to all the variables in the outer (parent) function, even after the parent function has returned.`,
+      `Closures in JavaScript refer to a way of restricting access to variables within a function's scope. When a function is created, it cannot access any variables outside of its own scope, even if they are in the parent function.`,
+      `Closures in JavaScript are a way of copying variables that are outside of a function's scope. When a function is created, it creates a separate copy of all the variables in the outer (parent) function, which can be accessed even after the parent function has returned.`,
+    ],
+    lvl: `medium`,
+    category: `js`,
   },
   {
     question: `What is the difference between synchronous and asynchronous code in JavaScript?`,
-    correct: ` `,
-    answers: [],
-    lvl: ` `,
+    correct: `Synchronous code in JavaScript executes one line of code at a time in a sequential order, waiting for each line to finish before moving on to the next. Asynchronous code, on the other hand, allows multiple lines of code to run at the same time without waiting for each other to finish.`,
+    answers: [
+      `Synchronous code in JavaScript executes one line of code at a time in a sequential order, waiting for each line to finish before moving on to the next. Asynchronous code, on the other hand, allows multiple lines of code to run at the same time without waiting for each other to finish.`,
+      `Asynchronous code in JavaScript executes one line of code at a time in a sequential order, waiting for each line to finish before moving on to the next. Synchronous code, on the other hand, allows multiple lines of code to run at the same time without waiting for each other to finish.`,
+      `Synchronous code in JavaScript allows multiple lines of code to run at the same time without waiting for each other to finish. Asynchronous code, on the other hand, executes one line of code at a time in a sequential order, waiting for each line to finish before moving on to the next.`,
+    ],
+    lvl: `medium`,
+    category: `js`,
   },
   {
     question: `What is the difference between synchronous and asynchronous code in JavaScript?`,
@@ -395,31 +439,34 @@ const questions: Questions[] = [
 
     This optimization can significantly improve the performance of your application, especially if you have complex or frequently updated components. React.memo() is particularly useful for preventing unnecessary re-renders of child components in a component hierarchy. `,
     answers: [],
-    lvl: ` `,
+    lvl: `medium`,
+    category: `js`,
   },
   {
     question: `What is the purpose of React.memo() and how does it work?`,
-    correct: `A Higher-Order Component (HOC) is a function that takes a component as an argument and returns a new component with additional functionality. It is a pattern in React used for code reuse, logic abstraction, and state management.
-
-    An HOC can be used for a variety of purposes, such as:
-    
-    Adding new props or functionality to a component
-    Managing state and passing down data to components
-    Wrapping components with additional behavior (e.g. authentication, logging)
-    Conditionally rendering components based on certain criteria
-    By returning a new component with additional functionality, HOCs allow for the creation of reusable code and abstraction of complex logic. `,
-    answers: [],
-    lvl: ` `,
+    correct: `The purpose of React.memo() is to optimize the rendering of functional components in React. It works by memorizing the result of the function component's output and only re-rendering when the input props have changed.`,
+    answers: [
+      `The purpose of React.memo() is to optimize the rendering of functional components in React. It works by memorizing the result of the function component's output and only re-rendering when the input props have changed.`,
+      `The purpose of React.memo() is to prevent the rendering of functional components in React. It works by checking if the input props have changed, and only rendering if they have not changed.`,
+      `React.memo() is a method used to memoize the state of a React component. It works by storing the current state of the component and comparing it to the previous state, only re-rendering when there is a change.`,
+    ],
+    lvl: `medium`,
+    category: `react`,
   },
   {
     question: `What is the difference between props and state in React?`,
     correct: `Props are immutable data passed from a parent component to a child component. They are read-only and cannot be modified within the child component.
-
     On the other hand, state is a mutable data store that belongs to a component. It is managed within the component and can be modified using the setState method. State can also be passed down to child components as props.
-    
-    So, while props are used for communication between components, state is used for managing the internal data and logic of a component. `,
-    answers: [],
-    lvl: ` `,
+    So, while props are used for communication between components, state is used for managing the internal data and logic of a component.`,
+    answers: [
+      `Props are immutable data passed from a parent component to a child component. They are read-only and cannot be modified within the child component.
+    On the other hand, state is a mutable data store that belongs to a component. It is managed within the component and can be modified using the setState method. State can also be passed down to child components as props.
+    So, while props are used for communication between components, state is used for managing the internal data and logic of a component.`,
+      `Props in React are a component's internal data that can be modified and updated using the setState() method. State is passed down to a component from its parent component and is read-only.`,
+      `State in React is short for "properties" and they are passed down to a component from its parent component. They are read-only and cannot be modified by the component that receives them.`,
+    ],
+    lvl: `medium`,
+    category: `react`,
   },
 ]
 

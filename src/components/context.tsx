@@ -11,6 +11,8 @@ type Cell = {
   practiceData: Questions[]
   goToPractise: () => void
   RemovePractiseQuestions: (val: string) => void
+  FilterCategory: (id: string) => void
+  FilterDifficulty: (id: string) => void
 }
 
 const QuestionContext = createContext<Cell | null>(null)
@@ -21,6 +23,7 @@ export const QusetionContextProvider = ({
   children: React.ReactNode
 }) => {
   const navigate = useNavigate()
+  const [questoinData, setQuestionData] = useState<typeof questions>(questions)
   const [numberOfQuestions, setNumberOfQuestions] = useState<number>(5)
   const [practiceData, setPracticeData] = useState<typeof questions>([])
   const [data, setData] = useState<typeof questions>([])
@@ -41,7 +44,7 @@ export const QusetionContextProvider = ({
     console.log(practiceData)
   }
   const randomQuestion = () => {
-    let shuffledData = questions
+    let shuffledData = questoinData
       .sort(() => Math.random() - 0.5)
       .slice(0, numberOfQuestions)
     setData(shuffledData)
@@ -64,6 +67,13 @@ export const QusetionContextProvider = ({
     console.log(filter)
     setPracticeData(filter)
   }
+
+  const FilterCategory = (id: string) => {
+    let filteredValue = questoinData.filter((val: any) => val.category === id)
+    setQuestionData(filteredValue)
+    console.log(filteredValue)
+  }
+  const FilterDifficulty = (id: string) => {}
   return (
     <QuestionContext.Provider
       value={{
@@ -75,6 +85,8 @@ export const QusetionContextProvider = ({
         practiceData,
         goToPractise,
         RemovePractiseQuestions,
+        FilterCategory,
+        FilterDifficulty,
       }}
     >
       {children}

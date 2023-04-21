@@ -3,6 +3,7 @@ import questions from '../data/data'
 import { UseQuestionContext } from './context'
 import questionMainImg from '../assets/questionMainPhoto.jpg'
 import { Link } from 'react-router-dom'
+import Filters from './Filters'
 const MainPage = () => {
   const {
     randomQuestion,
@@ -18,7 +19,7 @@ const MainPage = () => {
     inputDiv: `w-[60%]  max_Xll:w-[80%]  flex flex-col items-center gap-5 `,
     header: `text-[1.2rem] font-bold text-gray-400`,
     numberOfQuestions: `text-[1.2rem] text-green-600 font-bold w-[15rem] gap-2`,
-    pracitsDiv: `w-[50%] max_Xll:w-[100%]  gap-5 flex items-center justify-center flex-col outline-[1px] outline outline-gray-200 p-5 rounded-[35px] `,
+    pracitsDiv: `w-[50%] z-10 max_Xll:w-[100%]  gap-5 flex items-center justify-center flex-col outline-[1px] outline outline-gray-200 p-5 rounded-[35px] `,
     input: `w-[100%]`,
     linkBtnWrapper: `w-[100%] flex items-center justify-center gap-4`,
   }
@@ -30,10 +31,12 @@ const MainPage = () => {
       <img className={style.img} src={questionMainImg} />
       <p className="text-gray-400 text-[1.2rem] w-[60%]  max_md:w-[90%]   text-center">
         Here, you can prepare for a front-end/React job interview by practicing
-        commonly asked questions. I have done extensively researched this
+        commonly asked questions. I have done extensively researched on this
         subject and used multiple sources to gather the information.
       </p>
+
       <div className={style.inputDiv}>
+        <Filters />
         {practiceData.length > 0 && (
           <div className={style.pracitsDiv}>
             <h1 className={style.header}>
@@ -58,7 +61,7 @@ const MainPage = () => {
         </h1>
         <h1 className={style.header}>
           There Is
-          <span className="text-green-400 text-[1.4rem] px-1 s">
+          <span className="text-green-400 text-[1.4rem] px-1  ">
             {questions.length}
           </span>
           Questions In Data Base, Each Time Questions Are Randomly Selected
