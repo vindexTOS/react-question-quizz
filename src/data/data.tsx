@@ -217,7 +217,7 @@ const questions: Questions[] = [
       `by using yarn instad of npm for installing react`,
     ],
     lvl: `easy`,
-    category: `js`,
+    category: `react`,
   },
   {
     question: `What are the benefits of using a CSS preprocessor?`,
@@ -433,15 +433,15 @@ const questions: Questions[] = [
     lvl: `medium`,
     category: `js`,
   },
-  {
-    question: `What is the difference between synchronous and asynchronous code in JavaScript?`,
-    correct: `React.memo() is a higher-order component that memoizes a given component and re-renders it only if its props change. In other words, it compares the current props with the previous props and only if there are any differences, it re-renders the component.
+  // {
+  //   question: `What is the difference between synchronous and asynchronous code in JavaScript?`,
+  //   correct: `React.memo() is a higher-order component that memoizes a given component and re-renders it only if its props change. In other words, it compares the current props with the previous props and only if there are any differences, it re-renders the component.
 
-    This optimization can significantly improve the performance of your application, especially if you have complex or frequently updated components. React.memo() is particularly useful for preventing unnecessary re-renders of child components in a component hierarchy. `,
-    answers: [],
-    lvl: `medium`,
-    category: `js`,
-  },
+  //   This optimization can significantly improve the performance of your application, especially if you have complex or frequently updated components. React.memo() is particularly useful for preventing unnecessary re-renders of child components in a component hierarchy. `,
+  //   answers: [],
+  //   lvl: `medium`,
+  //   category: `js`,
+  // },
   {
     question: `What is the purpose of React.memo() and how does it work?`,
     correct: `The purpose of React.memo() is to optimize the rendering of functional components in React. It works by memorizing the result of the function component's output and only re-rendering when the input props have changed.`,

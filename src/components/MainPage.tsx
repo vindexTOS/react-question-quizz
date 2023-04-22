@@ -11,6 +11,7 @@ const MainPage = () => {
     setNumberOfQuestions,
     goToPractise,
     practiceData,
+    questoinData,
   } = UseQuestionContext()
   const style = {
     mainDiv: `flex items-center justify-center w-[100vw]  max_sm:py-10  h-[100%] py-10 flex-col gap-10  overflox-x-hidden `,
@@ -70,7 +71,7 @@ const MainPage = () => {
           onChange={(e) => setNumberOfQuestions(Number(e.target.value))}
           value={numberOfQuestions}
           min={5}
-          max={questions.length}
+          max={Number(questoinData.length)}
           className={style.input}
           type="range"
         />

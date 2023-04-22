@@ -5,6 +5,7 @@ import questions, { Questions } from '../data/data'
 type Cell = {
   randomQuestion: () => void
   data: typeof questions
+  questoinData: typeof questions
   setNumberOfQuestions: React.Dispatch<React.SetStateAction<number>>
   numberOfQuestions: number
   practiceQuestions: (obj: Questions) => void
@@ -24,7 +25,16 @@ export const QusetionContextProvider = ({
 }) => {
   const navigate = useNavigate()
   const [questoinData, setQuestionData] = useState<typeof questions>(questions)
-  const [numberOfQuestions, setNumberOfQuestions] = useState<number>(5)
+  const [numberOfQuestions, setNumberOfQuestions] = useState<number>(
+    questoinData.length,
+  )
+  useEffect(() => {
+    setNumberOfQuestions(questoinData.length)
+    console.log(numberOfQuestions)
+  }, [questoinData])
+  const [filteredDataQuestions, setFilteredDataQuestions] = useState<
+    typeof questions
+  >(questions)
   const [practiceData, setPracticeData] = useState<typeof questions>([])
   const [data, setData] = useState<typeof questions>([])
 
@@ -37,7 +47,7 @@ export const QusetionContextProvider = ({
 
   useEffect(() => {
     localStorage.setItem('practice', JSON.stringify(practiceData))
-    console.log(practiceData)
+    // console.log(practiceData)
   }, [practiceData])
   const practiceQuestions = (obj: Questions) => {
     setPracticeData([...practiceData, obj])
@@ -69,11 +79,26 @@ export const QusetionContextProvider = ({
   }
 
   const FilterCategory = (id: string) => {
-    let filteredValue = questoinData.filter((val: any) => val.category === id)
-    setQuestionData(filteredValue)
-    console.log(filteredValue)
+    if (id === 'all') {
+      setQuestionData(questions)
+    } else {
+      let filteredValue = questions.filter((val: any) => val.category === id)
+      setQuestionData(filteredValue)
+      console.log(filteredValue)
+    }
   }
-  const FilterDifficulty = (id: string) => {}
+  const FilterDifficulty = (id: string) => {
+    if (id === 'all') {
+      setQuestionData(questions)
+    } else {
+      let filteredValue = questoinData.filter((val: any) => val.lvl === id)
+      setQuestionData(filteredValue)
+      console.log(filteredValue)
+    }
+  }
+  // useEffect(() => {
+  //   setQuestionData(questions)
+  // }, [FilterDifficulty])
   return (
     <QuestionContext.Provider
       value={{
@@ -87,6 +112,7 @@ export const QusetionContextProvider = ({
         RemovePractiseQuestions,
         FilterCategory,
         FilterDifficulty,
+        questoinData,
       }}
     >
       {children}
