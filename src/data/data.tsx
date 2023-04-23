@@ -468,6 +468,72 @@ const questions: Questions[] = [
     lvl: `medium`,
     category: `react`,
   },
+  {
+    question: `What is a prototype chain`,
+    correct: `Prototype chaining is used to build new types of objects based on existing ones. It is similar to inheritance in a class based language.`,
+    answers: [
+      `Prototype chaining is used to build new types of objects based on existing ones. It is similar to inheritance in a class based language.`,
+      `Prototype chaining is used to create completely new objects that have no relation to existing ones.`,
+      `Prototype chaining is a process of copying all properties and methods of an object to a new object.`,
+    ],
+    lvl: `easy`,
+    category: `js`,
+  },
+  {
+    question: `What is the difference between slice and splice`,
+    correct: `slice method wont mutate array and it returns new array, it returns copy of an original array, picks selected elements from the array , splice method modifes the array, returns deleted elements from the array`,
+    answers: [
+      `slice method wont mutate array and it returns new array, it returns copy of an original array, picks selected elements from the array , splice method modifes the array, returns deleted elements from the array`,
+      `Slice method modifies the original array and doesn't return anything.`,
+      `Splice method doesn't modify the original array and returns a new array with the deleted elements.`,
+    ],
+    lvl: `medium`,
+    category: `js`,
+  },
+  {
+    question: `What is a first class function`,
+    correct: `In programming, a first-class function is a function that can be treated as a value, just like any other data type such as integers, strings, or objects.`,
+    answers: [
+      `In programming, a first-class function is a function that can be treated as a value, just like any other data type such as integers, strings, or objects.`,
+      `First-class functions are only used for advanced programming techniques and have no practical applications.`,
+      `First-class functions are a type of function that can only be used in object-oriented programming.`,
+    ],
+    lvl: `medium`,
+    category: `js`,
+  },
+  {
+    question: `What is a first order function`,
+    correct: `First-order function is a function that doesn t accept another function as an argument and doesn t return a function as its return value.`,
+    answers: [
+      `First-order function is a function that doesn t accept another function as an argument and doesn t return a function as its return value.`,
+      `First-order function is a function that always returns the same output for a given input, regardless of the environment or context in which it is used.`,
+      `First-order function is a function that accepts another function as an argument and returns a function as its return value.`,
+    ],
+    lvl: `medium`,
+    category: `js`,
+  },
+  {
+    question: `What is a higher order function`,
+    correct: `Higher-order function is a function that accepts another function as an argument or returns a function as a return value or both.`,
+    answers: [
+      `Higher-order function is a function that accepts another function as an argument or returns a function as a return value or both.`,
+      `Higher-order function is a function that always returns a value and never accepts any arguments.`,
+      `Higher-order function is a function that only accepts other functions as arguments and never returns a function.`,
+    ],
+    lvl: `medium`,
+    category: `js`,
+  },
+  {
+    question: `What is a unary function`,
+    correct: `Unary function is a function that accepts exactly one argument. It stands for a single argument accepted by a function.`,
+    answers: [
+      `Unary function is a function that accepts exactly one argument. It stands for a single argument accepted by a function.`,
+      `Unary function is a function that returns an object instead of a value.`,
+      `Unary function is a function that accepts two arguments.`,
+    ],
+    lvl: `medium`,
+    category: `js`,
+  },
 ]
 
 export default questions
@@ -477,6 +543,7 @@ export default questions
 //     correct:` `,
 //     answers:[],
 //     lvl:` `
+// category: ` `,
 // }
 
 // What is the box model in CSS, and how does it work?
